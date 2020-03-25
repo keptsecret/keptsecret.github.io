@@ -20,6 +20,7 @@
 
 title                   : "nibble"
 title_separator         : "-"
+logo                    : "/assets/images/logo.png"
 locale                  : "en-US"
 name                    : "Sorakrit Chonwattanagul"
 email                   : sorchon@gmail.com
