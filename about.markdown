@@ -1,18 +1,14 @@
 ---
-layout: page
+layout: posts
 title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I'm a computer science student from Thailand. This blog is mainly to document the things I learn and the currently few 
+things I know about programming.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I'll probably be working through things like computer vision (so OpenCV), machine learning (gotta decide between TF and
+ PyTorch at some point) but also the miscellaneous programming projects I probably should start on.  
+Python, Java and C++ are mostly my tools but I can work with HTMl (_shudder_) and various Javascript languages as well.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+[Links to my Github](https://github.com/keptsecret)
