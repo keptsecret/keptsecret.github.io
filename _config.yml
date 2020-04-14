@@ -54,7 +54,7 @@ author:
   name    : "Sorakrit Chonwattanagul"
   avatar  : "/assets/images/bio-photo.jpg"
   bio     : "Computer science student with interests in computer vision and machine learning still on the Path"
-  location: "Depends on time of year"
+  location: "Bangkok, Thailand; Atlanta, GA"
   links:
     - label: "About page"
       icon: "fas fa-fw fa-link"
@@ -62,11 +62,14 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/keptsecret"
+    - label: "Medium"
+      icon: "fab fa-medium"
+      url: "https://medium.com/@sorakritchonwattanagul"
     - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
+      icon: "fab fa-instagram-square"
       url: "https://instagram.com/two544nuts"
     - label: "LinkedIn"
-      icon: "fab fa-linkedin-in"
+      icon: "fab fa-linkedin"
       url: "https://www.linkedin.com/in/sorakrit-chonwattanagul/"
 
 defaults:
