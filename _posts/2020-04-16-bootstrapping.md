@@ -1,6 +1,6 @@
 ---
 title:  "What I've learned about Bootstrapping (statistics)"
-date:   2020-04-16 11:30:00 +0700
+date:   2020-04-16 14:22:00 +0700
 categories: statistics
 mathjax: true
 ---
