@@ -34,6 +34,13 @@ search                  : true
 github_username         : keptsecret
 words_per_minute        : 200
 
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "UA-151010899-1"
+    anonymize_ip: false # default
+
+
 # Build settings
 markdown                : kramdown
 remote_theme            : mmistakes/minimal-mistakes
