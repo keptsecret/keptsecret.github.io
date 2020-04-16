@@ -39,6 +39,7 @@ analytics:
   google:
     tracking_id: "UA-151010899-1"
     anonymize_ip: false # default
+google_site_verification: "hWOTgyuznw9E6GoXXsp-avH_TvqhGyxnz02u3Btr-wc"
 
 
 # Build settings
