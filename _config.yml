@@ -20,7 +20,6 @@
 
 title                   : "nibble"
 title_separator         : "-"
-logo                    : "/assets/images/logo.png"
 locale                  : "en-US"
 name                    : "Sorakrit Chonwattanagul"
 email                   : sorchon@gmail.com
@@ -28,7 +27,7 @@ description             : Just a small little blog for the things I find going t
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 teaser                  : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                    : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                    : "/assets/images/logo.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 minimal_mistakes_skin   : default
 search                  : true
 github_username         : keptsecret
