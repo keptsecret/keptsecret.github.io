@@ -3,5 +3,7 @@ main:
     url: "/"
   - title: "About"
     url: "/about/"
+  - title: "To Try"
+    url: "/totry/"
   - title: "Categories"
-    url: "/categories"
+    url: "/categories/"
