@@ -57,6 +57,7 @@ plugins:
   - jekyll-archives
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-github-metadata
 
 author:
   name    : "Sorakrit Chonwattanagul"

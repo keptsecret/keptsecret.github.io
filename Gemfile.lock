@@ -265,6 +265,7 @@ DEPENDENCIES
   github-pages
   jekyll-archives
   jekyll-feed
+  jekyll-github-metadata
   jekyll-include-cache
   jekyll-paginate
   jekyll-sitemap
