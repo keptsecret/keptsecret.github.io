@@ -2,7 +2,10 @@
 title: To Try List
 permalink: /totry/
 ---
-* __[Angular.js](https://medium.com/codingthesmartway-com-blog/angular-6-mean-stack-crash-course-part-1-front-end-project-setup-and-routing-89bec8332cea)__ - complete the MEAN stack I've been looking at
+___Updated__: 28/11/2020 (dd/mm/yyy)_
+
+* ~~__[Angular.js](https://medium.com/codingthesmartway-com-blog/angular-6-mean-stack-crash-course-part-1-front-end-project-setup-and-routing-89bec8332cea)__ - complete the MEAN stack I've been looking at~~ (I've decided to move on to React now)
+* __React.js__ - was easier to get going than Angular for me
 * __[OpenGL](https://learnopengl.com/)__ - brush up my C++ knowledge and learn about graphics
 * __Machine Learning (Scikit-Learn & Tensorflow)__ - about halfway through
 
