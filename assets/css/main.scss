@@ -1,0 +1,52 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+# Author's note: customizing this for own use
+---
+
+@charset "utf-8";
+
+/* copied variables from mmistakes _variables.scss */
+$sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+  "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+$global-font-family: $sans-serif !default;
+
+/* type scale (also copied) */
+$type-size-1: 2.441em !default; // ~39.056px
+$type-size-2: 1.953em !default; // ~31.248px
+$type-size-3: 1.563em !default; // ~25.008px
+$type-size-4: 1.25em !default; // ~20px
+$type-size-5: 1em !default; // ~16px
+$type-size-6: 0.75em !default; // ~12px
+$type-size-7: 0.6875em !default; // ~11px
+$type-size-8: 0.625em !default; // ~10px
+
+/* set the font size to type-size-5 (1em apparently) */
+.page__lead {
+    font-family: $global-font-family;
+    font-size: $type-size-5;
+}
+
+p, ul, li {
+    font-size: $type-size-5;
+}
+
+/* taken from base-16-summerfruit-light syntax highlighting */
+$base00: #fafafa !default;
+$base01: #E0E0E0 !default;
+$base02: #D0D0D0 !default;
+$base03: #B0B0B0 !default;
+$base04: #000000 !default;
+$base05: #101010 !default;
+$base06: #151515 !default;
+$base07: #202020 !default;
+$base08: #FF0086 !default;
+$base09: #FD8900 !default;
+$base0a: #ABA800 !default;
+$base0b: #00C918 !default;
+$base0c: #1FAAAA !default;
+$base0d: #3777E6 !default;
+$base0e: #AD00A1 !default;
+$base0f: #CC6633 !default;
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
