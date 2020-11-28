@@ -15,20 +15,20 @@ Before starting, the system should have some C compiler installed (usually `gcc`
 
 From the command line, inside your working repository, download the github repository with:
 
-```bash
+{% highlight console %}
 foo@bar:~$ git clone https://github.com/kaldi-asr/kaldi.git
-```
+{% endhighlight %}
 
 Enter the directory created (usually named `kaldi` or whatever name was entered when pulling from Github):
 
-```bash
+{% highlight console %}
 foo@bar:~$ cd kaldi
 foo@bar:~/kaldi$
-```
+{% endhighlight %}
 
 Reading the `INSTALL` file gives the overall instructions:
 
-```bash
+{% highlight console %}
 foo@bar:~/kaldi$ cat INSTALL
 This is the official Kaldi INSTALL. Look also at INSTALL.md for the git mirror installation.
 [Option 1 in the following does not apply to native Windows install, see windows/INSTALL or following Option 2]
@@ -46,11 +46,11 @@ Option 2 (cmake):
 
     Go to cmake/ and follow INSTALL.md instructions there.
     Note, it may not be well tested and some features are missing currently.
-```
+{% endhighlight %}
 
 With this, move into the `tools` directory and read the `INSTALL` file there:
 
-```bash
+{% highlight console %}
 foo@bar:~/kaldi$ cd tools
 foo@bar:~/kaldi/tools$ cat INSTALL
 To check the prerequisites for Kaldi, first run
@@ -85,16 +85,16 @@ build by supplying the "-j" option to make, e.g. to use 4 CPUs
 In extras/, there are also various scripts to install extra bits and pieces that
 are used by individual example scripts.  If an example script needs you to run
 one of those scripts, it will tell you what to do.
-```
+{% endhighlight %}
 
 First, run `check_dependencies.sh` and install any of the missing tools required (as mentioned above). Then, run `make` or if you want to compile using multiple threads `make -j <num-threads>`, where `<num-threads>` can be found using the `nproc` command:
 
-```bash
+{% highlight console %}
 foo@bar:~/kaldi/tools$ extras/check_dependencies.sh
 extras/check_dependencies.sh: all OK.
-```
+{% endhighlight %}
 
-```bash
+{% highlight console %}
 foo@bar:~/kaldi/tools$ nproc
 4
 foo@bar:~/kaldi/tools$ make -j 4
@@ -105,17 +105,17 @@ Warning: IRSTLM is not installed by default anymore. If you need IRSTLM
 Warning: use the script extras/install_irstlm.sh
 All done OK.
 foo@bar:~/kaldi/tools$
-```
+{% endhighlight %}
 
 Just in case, install IRSTLM as well for when needed to make own language models, but you can always come back to this later:
 
-```bash
+{% highlight console %}
 foo@bar:~/kaldi/tools$ extras/install_irstlm.sh
-```
+{% endhighlight %}
 
 The next part of the first `INSTALL` file is to enter the `src` directory and work from there:
 
-```bash
+{% highlight console %}
 foo@bar:~/kaldi/tools$ cd ../src
 foo@bar:~/kaldi/src$ cat INSTALL
 
@@ -138,33 +138,33 @@ many cores.
 
 For more information, see documentation at http://kaldi-asr.org/doc/
 and click on "The build process (how Kaldi is compiled)".
-```
+{% endhighlight %}
 
 Pretty straightforward from here on by following the instructions here, if the tools compiled successfully. First, run the `./configure` script:
 
-```bash
+{% highlight console %}
 foo@bar:~/kaldi/src$ ./configure --shared
 Configuring...
             .
             .
             .
 SUCCESS
-```
+{% endhighlight %}
 
 Then, `make depend`, while also using the appropriate number of threads, as above:
 
-```bash
+{% highlight console %}
 foo@bar:~/kaldi/src$ make depend -j 4
             .
             .
             .
-```
+{% endhighlight %}
 
 Then, `make`:
 
-```bash
+{% highlight console %}
 foo@bar:~/kaldi/src$ make -j 4
-```
+{% endhighlight %}
 
 ### Important note for MacOS:
 
@@ -175,15 +175,15 @@ You can check this with `man`, to see the manual of the tool required (e.g. `man
 Fix this by installing the GNU version of the tool in the appropriate package, either from Homebrew or alternative and change the path in your shell config script to use the new GNU version.  
 An important one is `coreutils`, but a few others may be needed as well:
 
-```bash
+{% highlight console %}
 foo@bar:~$ brew install coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt grep
-```
+{% endhighlight %}
 
 These tools can be run with the g prefix in front of their names, such as `gawk` instead of `awk`.
 
 Otherwise, to change their path, check their brew description
 
-```bash
+{% highlight console %}
 foo@bar:~$ brew info coreutils
 coreutils: stable 8.21
 http://www.gnu.org/software/coreutils
@@ -203,7 +203,7 @@ Additionally, you can access their man pages with normal names if you add
 the "gnuman" directory to your MANPATH from your bashrc as well:
 
     MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-```
+{% endhighlight %}
 
 ## Testing out Kaldi
 
@@ -211,7 +211,7 @@ To see if Kaldi works, try out the `yesno` model, which classifies if the person
 
 First, enter the examples directory and into the `yesno` one:
 
-```bash
+{% highlight console %}
 foo@bar:~/kaldi/src$ cd ../egs
 foo@bar:~/kaldi/egs$ ls
 ami                chime1                   fisher_english  librispeech  sprakbanken  tidigits      yesno
@@ -238,18 +238,18 @@ The scripts are in s5/.
 
 foo@bar:~/kaldi/egs/yesno$ cd s5
 foo@bar:~/kaldi/egs/yesno/s5$
-```
+{% endhighlight %}
 
 Run the `./run.sh` file and it should run without any errors:
 
-```bash
+{% highlight console %}
 foo@bar:~/kaldi/egs/yesno/s5$ ./run.sh
             .
             .
             .
 decode.sh: feature type is delta
 %WER 0.00 [ 0 / 232, 0 ins, 0 del, 0 sub ] [PARTIAL] exp/mono0a/decode_test_yesno/wer_10
-```
+{% endhighlight %}
 
 ## Some important files and directories in Kaldi
 
@@ -262,7 +262,7 @@ Before scripts in `egs` can be directly run however, you have to prepare data to
 
 Looking at the `yesno` example, before running `./run.sh`:
 
-```bash
+{% highlight console %}
 foo@bar:~/kaldi/egs/yesno$ tree
 .
 ├── README.txt
@@ -289,11 +289,11 @@ foo@bar:~/kaldi/egs/yesno$ tree
     └── utils -> ../../wsj/s5/utils
 
 6 directories, 16 files
-```
+{% endhighlight %}
 
 After `./run.sh`, an extra `data` directory is created
 
-```bash
+{% highlight console %}
 foo@bar:~/kaldi/egs/yesno/s5$ tree data
 ./data/
 ├── lang
@@ -427,38 +427,38 @@ foo@bar:~/kaldi/egs/yesno/s5$ tree data
     └── wav.scp
 
 14 directories, 115 files
-```
+{% endhighlight %}
 
 Some files of note are `wav.scp`, `segments` and `utt2spk`.
 
 `wav.scp` links the actual audio file to a "recording ID", which can be referenced later on in other files. Its format is as:
 
-```bash
+{% highlight console %}
 <recording-id> <audio-file-path>
 e.g.
 FILE01 /exports/set1/file01.wav
-```
+{% endhighlight %}
 
 `segments` indicates the segments in the audio file where speech occurs. It links an "utterance ID" to the correct start and end time (in seconds) in the audio file:
 
-```bash
+{% highlight console %}
 <utterance-id> <recording-id> <start-time> <end-time>
 e.g.
 FILE01_0002-0012 FILE01 0.02 0.12
 FILE01_0031-0103 FILE01 0.31 1.03
-```
+{% endhighlight %}
 
 `utt2spk` links the utterance to the speaker, which may also be the recording ID depending on the naming scheme:
 
-```bash
+{% highlight console %}
 <utterance-id> <speaker-id>
 e.g.
 FILE01_0002-0012 FILE01
 FILE01_0031-0103 FILE01
-```
+{% endhighlight %}
 
 This means in some cases, such as in _diarization_, the `utt2spk` file can be created with the shell command:
 
-```bash
+{% highlight console %}
 awk '{print $1, $2}' segments > utt2spk
-```
+{% endhighlight %}
