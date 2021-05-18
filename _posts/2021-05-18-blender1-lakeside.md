@@ -34,7 +34,7 @@ A useful trick that I used here was adjusting the focal length of the (virtual) 
 A "side effect", if it can be called that, is that the angle of view also changes when the focal length is changed, affecting the perspective from the viewport.
 Increasing focal length decreases the angle of view so fewer objects are in frame around the subject, whereas decreasing the focal length (as I did in this case) increases the angle of view, showing more of the surroundings and pushing faraway objects even further back.
 
-![Focal length effect](https://expertphotography.com/wp-content/uploads/2019/07/focal-length-comparison.jpg | width=400)
+<img src="https://expertphotography.com/wp-content/uploads/2019/07/focal-length-comparison.jpg" alt="Focal length effect" width="400px">
 
 In this scene, from the Blender default of a 50mm focal length, the camera uses a 23mm focal length.
 The number isn't anything specific, rather an arbitrary figure I found to best fit this scene and its layout.
@@ -61,21 +61,21 @@ This was a rather tricky one. I was looking through a number of photos of mounta
 What I mean by this is how the colors of the mountain and the land far away from the camera is much less saturated and sort of "veiled" compared to elements in the foreground.
 To me, it seemed to add a sense of depth, and this was the effect I sought to recreate.
 
-![Mt. Fuji is tinted a bit blue](https://www.planetware.com/photos-large/JPN/japan-mt-fuji-and-cherry-blossoms.jpg | width=500)
+<img src="https://www.planetware.com/photos-large/JPN/japan-mt-fuji-and-cherry-blossoms.jpg" alt="Mt. Fuji is tinted a bit blue" width="500px">
 
 For this effect, I had to go through 3 different methods before finding the one that worked best. I'll detail them here as well.
 
-I initially tried using the built-in mist pass in Blender, enabled by going to _View Layer Properties &rightarrow; Passes &rightarrow; Data &rightarrow; Mist_ and adjusted under _World &rightarrow; Mist Pass_.
+I initially tried using the built-in mist pass in Blender, enabled by going to _View Layer Properties -> Passes -> Data -> Mist_ and adjusted under _World -> Mist Pass_.
 Then the mist pass would have to be mixed with the final render using the Blender compositor: [more details here](https://www.blendernation.com/2019/03/06/using-the-mist-pass-to-create-depth/)
 It didn't really work especially due to how aggressive the mist pass was and the blue in the sky was entirely lost.
 It seemed to me like it would work best in an indoor scene or a scene where the sky was not visible at all.
 Alternatively, one could also use the Z-depth pass to give similar effects to the mist pass, but neither of them worked in this situation for me.
 
 The second option I then tried was to use volumetric lighting. There are two ways to achieve this.
-The first method is to add volumetric scattering to the world environment, by going to _World &rightarrow; Volume_ and change it to _Volume Scatter_.
+The first method is to add volumetric scattering to the world environment, by going to _World -> Volume_ and change it to _Volume Scatter_.
 It works at a very low density value, like 0.001; otherwise, you get a very white screen.
 This method entirely removes the effect of any world textures, like HDRs, so I couldn't use it.
-The second method is by adding a massive cube over the terrain and setting its material to _Volume &rightarrow; Volume Scatter_. Again, it only works for very low values of density.
+The second method is by adding a massive cube over the terrain and setting its material to _Volume -> Volume Scatter_. Again, it only works for very low values of density.
 From my observations, this method works best for indoor scenes, where you want to achieve the god rays and a heavy atmosphere, and works well for night scenes as well.
 When I used it for an outdoor daytime scene, the fact that the cube didn't have a surface material meant that the surface opposite the camera was not rendered, resulting in a weird brighter rectangle in the middle of the scene.
 In addition, volume scattering is very computationally intensive and renders take considerably longer - not fit for a quick preview in the viewport.
