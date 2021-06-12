@@ -30,7 +30,8 @@ p, ul, li {
     font-size: $type-size-5;
 }
 
-/* taken from base-16-summerfruit-light syntax highlighting */
+/* taken from base16-summerfruit-light syntax highlighting */
+/*
 $base00: #fafafa !default;
 $base01: #E0E0E0 !default;
 $base02: #D0D0D0 !default;
@@ -47,6 +48,25 @@ $base0c: #1FAAAA !default;
 $base0d: #3777E6 !default;
 $base0e: #AD00A1 !default;
 $base0f: #CC6633 !default;
+*/
+
+/* trying out base16-mexico-light instead */
+$base00: #f8f8f8 !default;
+$base01: #e8e8e8 !default;
+$base02: #d8d8d8 !default;
+$base03: #b8b8b8 !default;
+$base04: #585858 !default;
+$base05: #383838 !default;
+$base06: #282828 !default;
+$base07: #181818 !default;
+$base08: #ab4642 !default;
+$base09: #dc9656 !default;
+$base0a: #f79a0e !default;
+$base0b: #538947 !default;
+$base0c: #4b8093 !default;
+$base0d: #7cafc2 !default;
+$base0e: #96609e !default;
+$base0f: #a16946 !default;
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
