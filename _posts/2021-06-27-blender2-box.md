@@ -1,6 +1,6 @@
 ---
 title:      "Blender Artist Notes #2: Unforgotten render"
-date:       2021-06-27 16:30:00 +0700
+date:       2021-06-27 16:00:00 +0700
 categories: digital-art blender
 ---
 New little render up. I think this one is probably the best one so far, especially in terms of how I wanted it to look vs. how it actually came out.
@@ -15,6 +15,8 @@ Final render:
 ![Final render](/assets/images/20210627-blender2-music-box.png)
 
 _Also, since Blender 2.93 came out a couple of days after I started this, this was done on version 2.92._
+
+---
 
 ## Trying out sculpting and the workflow in Blender
 
@@ -61,6 +63,8 @@ Then with the UV unwrapped and render subdivision level at 5, I baked the normal
 It worked about as well as I expected it to actually, which was good enough for an object that size in the scene.
 After that, I just painted the model and made the material look a bit plastic-y (with subsurface scattering, which might've been too high) and voila!
 
+---
+
 ## Diamond and the science behind it
 
 I suppose I could split this part into two because there's the topic of texturing the diamond and of placing it into this scene specifically.
@@ -90,3 +94,32 @@ Here's a test render I did before I set it into my scene.
 ![Diamond test render](/assets/images/20210627-blender2-diamond-render.png)
 
 ### Render layers (or how I fixed a diamond that was too bright)
+
+So the diamond ring was one of the last items I added to the scene.
+I didn't think too much when rendering it after the addition, but when I saw the output, I noticed that the diamond on the ring stood out way too much.
+As in, it was a noisy blob of bright white in a scene that was otherwise supposed to be quite dim.
+
+I suppose it may have been because the scene was set up in a volumetric cube, which I used to get the dusty atmosphere.
+This meant I had to use a very bright area lamp (as in, with strength in the thousands) to be able to achieve the appropriate brightness.
+Then for some reason, it meant there was enough light incoming to make the diamond look entirely overblown in the scene.
+Unfortunately, in reality, diamonds don't shine bright in such an environment, especially if it's a dusty room.
+
+The simple solution to this would be to have a separate light source that would light _only_ the diamond, but I found after a quick search that Blender still lacks light linking (what doing that is called in other 3D suites).
+And that's when I found the solution through __render layers__.
+Essentially, I could render the scene without the ring and the ring without the scene separately, before compositing them in together.
+One of the hardest parts was getting the lighting to match as best as possible, but still make the ring itself visible.
+This I did using two lights: one strong light to simulate the area light from the right side and softer, weaker one on the opposite side of the ring to provide a sort of makeshift ambient lighting.
+I could say it worked well enough.
+Also, rendering in layers does mean that there is still indirect lighting from the surrounding objects (including shadows), so I didn't have to worry about that aspect.
+
+What I should note is that for this scene, I added a volume particle system to the volumetric cube as well to imitate dust particles showing up on camera.
+What this did was it affected the compositing step when using the depth pass, causing "holes" in the object composited back in.
+This meant I had to add a separate render layer for each scene for specfically just the depth pass, without the volumetric cube.
+So ultimately, I essentially had four render layers for this entire scene.
+
+---
+As a closing thought though, I would say that this is my best render so far.
+Obviously, with how much I learned from just working on this, it seems I have quite some ways to go before really becoming an expert.
+
+Maybe I'll try moving on to something like rigging and animation next, since I know nothing of the animation workflow in Blender yet.
+Though, with my experience from trying out After Effects, I know that it'll definitely be quite the tedious challenge.
