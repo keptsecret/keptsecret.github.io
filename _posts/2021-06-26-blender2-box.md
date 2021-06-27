@@ -1,6 +1,6 @@
 ---
 title:      "Blender Artist Notes #2: Unforgotten render"
-date:       2021-05-26 10:00:00 +0700
+date:       2021-05-27 16:30:00 +0700
 categories: digital-art blender
 ---
 New little render up. I think this one is probably the best one so far, especially in terms of how I wanted it to look vs. how it actually came out.
