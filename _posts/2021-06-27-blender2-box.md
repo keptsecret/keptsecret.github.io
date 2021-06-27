@@ -12,7 +12,7 @@ Had to try a few new things for this scene, so I'll write down some notes here f
 
 Final render:
 
-![Final render](/assets/images/20210624-blender2-music-box.png)
+![Final render](/assets/images/20210627-blender2-music-box.png)
 
 _Also, since Blender 2.93 came out a couple of days after I started this, this was done on version 2.92._
 
@@ -36,6 +36,7 @@ It works similarly to the _Subdivide_ modifier but geared specifically for sculp
 You can subdivide the model to increase the number of subdivisions to be applied to the model.
 Then with the 3 settings -- Levels Viewport, Sculpt and Render -- which set the levels of subdivisions to show in the viewport, when sculpting, and for rendering respectively.
 You can sculpt the overall shape using lower subdivision levels and then add the finer details with higher levels.
+
 However, _Multires_ doesn't add any polygons, so they will remain as they are (as quads) when you sculpt and only be displaced.
 Another difference between _Mutlires_ and _Dyntopo_ seems to be that the former handles fine detailed features better, provided that you give the modifier enough sculpt levels.
 [This video](https://youtu.be/Y5Sow63cu80) showcases the difference, which I would guess has to do with the triangles used in _Dyntopo_ and the fact that it also creates polygons relative to the camera.
@@ -47,15 +48,45 @@ Baking with _Dyntopo_ requires two models, the low poly model and the sculpted m
 While I think there is a proper workflow to sculpting and baking in Blender (sculpt overall shape with _Dyntopo_ --> retopo the model --> sculpt details with _Multires_ --> bake normals), I went with a simpler method.
 I began by modeling a cube in Edit mode into a rough shape of the dancer before adding the _Multires_ modifier to it.
 Five subdivisions was enough for this sculpt and I began to shape the model by sculpting at level 2 first, before moving to level 4.
-![Comparison before and after sculpts](/assets/images/20210624-blender2-sculpts.png)
+
+![Comparison before and after sculpts](/assets/images/20210627-blender2-sculpts.png)
 
 A precaution I learned about later on was in using the _Smooth_ brush, where if there aren't enough polygons, smoothing the surface will cause the opposite surface to be pulled as well, causing some vertices to end up in weird positions.
 Since my initial model was too rough (at level 0), I switched applied the level 1 mesh to the model instead before I began baking.
 UV unwrapping the model was also simpler than I thought and I thought I did a pretty decent job.
 Then with the UV unwrapped and render subdivision level at 5, I baked the normals and the displacement textures from the model (a new image texture had to be created first, and I made it 4K 32-bit floats without alphas) and applied it to the level 1 mesh.
-![Final UVs: I guess it as good enough](/assets/images/20210624-blender2-dancer-uvs.png)
+
+![Final UVs: I guess it as good enough](/assets/images/20210627-blender2-dancer-uvs.png)
 
 It worked about as well as I expected it to actually, which was good enough for an object that size in the scene.
 After that, I just painted the model and made the material look a bit plastic-y (with subsurface scattering, which might've been too high) and voila!
 
 ## Diamond and the science behind it
+
+I suppose I could split this part into two because there's the topic of texturing the diamond and of placing it into this scene specifically.
+
+### More complicated than I expected
+
+Texturing the diamond begins as any ol' modern Blender texturing does, which is with the _Principled BSDF_ shader.
+Well, I tried that, along with the IOR set to 2.418 (which is that of diamond) and transparency set all the way up... and it just looked like some dense glass.
+No shiny sparkles or anything to indicate that it was a diamond.
+
+_As a side note, Blender has a default way to create diamonds, which is with the __Extra Meshes__ addon enabled._
+_The diamond mesh is then available from the_ Shift-A _menu like other meshes._
+_However, I used the __JewelCraft__ addon, which allows for different cuts of the diamond, as well as options to specify a carat for the diamond size._
+_Since searching the net told me the average diamond size on an (engagement) ring was 1-1.2 carats, which is a width of 6.9mm, that was useful in achieving realistic proportions._
+
+Some scouring of the internet led to a quality in cut diamonds (and some other jewels) -- __dispersion__ -- and a way to achieve it in texturing.
+Basically, dispersion is where white light enters the diamond and splits into the different spectral colors of visible light.
+The viewer of the gemstone will then see a display of colored light (sometimes called _diamond fire_).
+This effect can be simulated in texturing using different IORs in the _Principled BSDF_ for different colors of light, before adding them together.
+If one were very diligent, it should be possible to do all the colors but for practical purposes, I went with only the primary colors RGB.
+
+![Diamond material nodes](/assets/images/20210627-blender2-diamond-mat.png)
+
+Rendering it was an absolute heck of a task, with how noisy it turned out but denoising the result worked well enough.
+Here's a test render I did before I set it into my scene.
+
+![Diamond test render](/assets/images/20210627-blender2-diamond-render.png)
+
+### Render layers (or how I fixed a diamond that was too bright)
