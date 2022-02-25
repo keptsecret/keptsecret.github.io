@@ -62,7 +62,7 @@ plugins:
 author:
   name    : "Sorakrit Chonwattanagul"
   avatar  : "/assets/images/bio-photo.jpg"
-  bio     : "Computer science student with interests in computer vision and machine learning, always looking forward"
+  bio     : "Computer science student with interests in computer vision and graphics; Godot contributor; occasional Blender enthusiast"
   location: "Bangkok, Thailand; Atlanta, GA"
   links:
     - label: "About page"
