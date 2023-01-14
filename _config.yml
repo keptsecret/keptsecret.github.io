@@ -51,6 +51,7 @@ paginate_path: /page:num/
 # relative_permalinks: false
 breadcrumbs: true
 include: ["_pages"]
+github: [metadata]
 plugins:
   - jekyll-feed
   - jekyll-include-cache

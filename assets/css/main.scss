@@ -30,6 +30,8 @@ p, ul, li {
     font-size: $type-size-5;
 }
 
+img + em { }
+
 /* taken from base16-summerfruit-light syntax highlighting */
 /*
 $base00: #fafafa !default;
