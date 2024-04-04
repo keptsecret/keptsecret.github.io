@@ -1,7 +1,7 @@
 ---
 title:      "Basic Computer Vision with CNNs"
 date:       2020-12-14 10:00:00 +0700
-categories: programming ML CV CNN
+categories: machine-learning computer-vision
 ---
 ___Author's note__: So this is a rather new topic, even though I have played around with dense (fully connected) networks before - convolutional networks are a new concept for me and I was surprised with its performance._
 

@@ -1,7 +1,7 @@
 ---
 title:      "Starting with Kaldi"
 date:       2020-08-14 10:00:00 +0700
-categories: programming ASR Kaldi
+categories: ASR Kaldi
 ---
 ## Some prefacing notes
 
