@@ -1,18 +1,13 @@
 ---
-title: To Try List
-permalink: /totry/
+title: To Do List
+permalink: /todo/
 ---
 ___Updated__: 28/11/2020 (dd/mm/yyy)_
 
-* ~~__[Angular.js](https://medium.com/codingthesmartway-com-blog/angular-6-mean-stack-crash-course-part-1-front-end-project-setup-and-routing-89bec8332cea)__ - complete the MEAN stack I've been looking at~~ (I've decided to move on to React now)
-* __React.js__ - was easier to get going than Angular for me
-* __[OpenGL](https://learnopengl.com/)__ - brush up my C++ knowledge and learn about graphics
-* __Machine Learning (Scikit-Learn & Tensorflow)__ - about halfway through
+* __Vulkan project__: new project in Vulkan in development, look for Sublimation Engine on my GitHub (hopefully, it's up)
 
 ## Might Check Out
 
-* __OpenCV__ - going through it some more
 * __Blender dev__ - I know C++ but this is mostly written in C, so pointers and all that jazz
-* __[Django](https://www.djangoproject.com/)__ - backend framework in Python
-
-_Basically, I've no idea which part of software development I would like best so I'mma try them all._
+* Some more CUDA, offline pathtracing
+* Finish Cyberpunk 2077!
