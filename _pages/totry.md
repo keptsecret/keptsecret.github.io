@@ -2,7 +2,7 @@
 title: To Do List
 permalink: /todo/
 ---
-___Updated__: 28/11/2020 (dd/mm/yyy)_
+___Updated__: 04/04/2024
 
 * __Vulkan project__: new project in Vulkan in development, look for Sublimation Engine on my GitHub (hopefully, it's up)
 
