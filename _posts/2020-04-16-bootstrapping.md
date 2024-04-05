@@ -1,8 +1,9 @@
 ---
-title:  "What I've learned about Bootstrapping (statistics)"
-date:   2020-04-16 14:22:00 +0700
+title:      "What I've learned about Bootstrapping (statistics)"
+date:       2020-04-16 14:22:00 +0700
 categories: statistics
-mathjax: true
+mathjax:    true
+toc:        true
 ---
 I've recently been going through some new things in machine learning, and came across a seemingly important but small topic called _bootstrapping_. 
 I looked it up and aside from a few places (and Wikipedia, of course), there weren't many explanations for it, so I thought I could try to explain it as well.

@@ -2,6 +2,7 @@
 title:      "Blender Artist Notes #1: By the lakeside render"
 date:       2021-05-18 16:00:00 +0700
 categories: digital-art blender
+toc:        true
 ---
 Posting this fresh off my mind. I just recently finished a Blender piece, that I'm about 90% satisfied with.
 I'm not really aiming for any higher right now because the piece is fine as it is right now and adding anymore without knowing what to add is going to ruin it.

@@ -2,6 +2,7 @@
 title:      "Blender Artist Notes #2: Unforgotten render"
 date:       2021-06-27 16:00:00 +0700
 categories: digital-art blender
+toc:        true
 ---
 New little render up. I think this one is probably the best one so far, especially in terms of how I wanted it to look vs. how it actually came out.
 It works especially well because of the small scope of the environment, which in this case is just part of a workshop tabletop.
