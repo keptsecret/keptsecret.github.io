@@ -59,7 +59,7 @@ github: [metadata]
 
 author:
   name    : "Sorakrit Chonwattanagul"
-  avatar  : "/assets/images/bio-photo.jpg"
+  avatar  : "/assets/images/bio-pic.jpg"
   bio     : "Former computer science student with interests in computer vision and graphics; Godot contributor; occasional Blender enthusiast"
   location: "Bangkok, Thailand; Atlanta, GA"
   links:
