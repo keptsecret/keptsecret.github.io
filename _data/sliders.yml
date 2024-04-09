@@ -1,0 +1,80 @@
+- selector: shadows
+  bullets: true
+  captions: true
+  images:
+    - src: /assets/images/skylei/shadow1.png
+      alt: Cascade level 1 (closest)
+    - src: /assets/images/skylei/shadow2.png
+      alt: Cascade level 2
+    - src: /assets/images/skylei/shadow3.png
+      alt: Cascade level 3
+    - src: /assets/images/skylei/shadow4.png
+      alt: Cascade level 4 (furthest)
+  settings:
+    height: "'auto'"
+    effect: "'fade'"
+
+- selector: forward_lighting
+  bullets: true
+  captions: true
+  images:
+    - src: /assets/images/skylei/forward-lighting.png
+      alt: Lighting
+    - src: /assets/images/skylei/forward-lighting_raw.png
+      alt: Raw image buffer
+  settings:
+    height: "'auto'"
+    effect: "'fade'"
+
+- selector: pbr_tex
+  bullets: true
+  captions: true
+  images:
+    - src: /assets/images/skylei/saturation.png
+      alt: Saturation
+    - src: /assets/images/skylei/albedo.png
+      alt: Albedo (color)
+    - src: /assets/images/skylei/normals.png
+      alt: Normals
+    - src: /assets/images/skylei/metallic-roughness.png
+      alt: Metallic (r) + roughness (g)
+  settings:
+    height: "'auto'"
+    effect: "'fade'"
+
+- selector: forward_env
+  bullets: true
+  captions: true
+  images:
+    - src: /assets/images/skylei/forward-skybox.png
+      alt: Rendered skybox
+    - src: /assets/images/skylei/forward-skybox_raw.png
+      alt: Raw image buffer
+  settings:
+    height: "'auto'"
+    effect: "'fade'"
+
+- selector: reflections
+  bullets: true
+  captions: true
+  images:
+    - src: /assets/images/skylei/blended_reflections.png
+      alt: Render with blended reflections
+    - src: /assets/images/skylei/reflections.png
+      alt: SSR map
+  settings:
+    height: "'auto'"
+    effect: "'fade'"
+
+- selector: alt_reflections
+  bullets: true
+  captions: true
+  images:
+    - src: /assets/images/skylei/alternative_ssr.png
+      alt: Another view with reflections
+    - src: /assets/images/skylei/alternative_reflections.png
+      alt: SSR map
+  settings:
+    height: "'auto'"
+    effect: "'fade'"
+    
